@@ -1,0 +1,11 @@
+@import 'assets/style/function.scss';
+
+.list {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  @include media-mo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

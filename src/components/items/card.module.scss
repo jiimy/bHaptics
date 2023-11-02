@@ -1,0 +1,14 @@
+.card {
+  img {
+    height: 129px;
+  }
+  .desc {
+    display: flex;
+    align-items: center;
+    height: 58px;
+    padding: 0 10px 0 20px;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 700;;
+  }
+}

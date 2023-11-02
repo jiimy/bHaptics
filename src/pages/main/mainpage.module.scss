@@ -1,0 +1,27 @@
+.mainpage {
+  background: #fbfbfd;
+  padding-bottom: 100px;
+  min-height: calc(100vh - 100px);
+}
+.title {
+  margin-top: 100px;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 42.57px;
+  text-align: center;
+}
+.desc {
+  margin-top: 20px;
+  text-align: center;
+  line-height: 20px;
+  margin-bottom: 62px;
+}
+.sort_area {
+  margin-top: 22px;
+  height: 40px;
+  align-items: center;
+}
+.tag_area {
+  position: relative;
+  height: 66px;
+}

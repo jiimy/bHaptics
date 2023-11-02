@@ -17,7 +17,8 @@ const Search = () => {
   return (
     <form className={s.search} onSubmit={handleSubmit}>
       <input type="text" placeholder="Search" value={text} onChange={(e) => setText(e.target.value)} />
-      <Search34 />
+      {/* <button type="submit"></button> */}
+      <Search34 onClick={handleSubmit}/>
     </form>
   );
 };

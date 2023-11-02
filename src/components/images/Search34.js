@@ -1,8 +1,8 @@
 import React from "react";
 
-const Search34 = () => {
+const Search34 = ({ onClick }) => {
   return (
-    <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={onClick}>
       <path
         fillRule="evenodd"
         clipRule="evenodd"

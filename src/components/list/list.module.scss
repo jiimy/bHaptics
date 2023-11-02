@@ -1,6 +1,7 @@
 @import 'assets/style/function.scss';
 
 .list {
+  position: relative;
   margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);

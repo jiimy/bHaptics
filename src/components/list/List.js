@@ -5,12 +5,14 @@ import { useQuery } from "react-query";
 import { useDispatch, useSelector } from "react-redux";
 import { FILTER_LENGTH } from "store/filter";
 import s from "./list.module.scss";
+import Spinner from "components/spinner/Spinner";
 
 const List = () => {
   const dispatch = useDispatch();
   const searchkeyword = useSelector((state) => state.searchStore.keyword);
-  const sortKeyword = useSelector((state) => state.sortStore.sortKeyword);
   const filterKeyword = useSelector((state) => state.filterStore.data);
+  const filteredLength = useSelector((state) => state.filterStore.resultData);
+  const sortKeyword = useSelector((state) => state.sortStore.sortKeyword);
   const values = filterKeyword && filterKeyword.map((item) => item.value);
   const [resultData, setResultData] = useState([]);
 
@@ -47,13 +49,11 @@ const List = () => {
     dispatch(FILTER_LENGTH(filteredSort && filteredSort.length));
   }, [sortKeyword]);
 
-  // console.log("data", data);
-
   return (
     <div className={s.list}>
       {isSuccess && data && resultData?.map((item) => <Cards data={item} key={item.id} />)}
-      {searchkeyword !== "" && resultData.length === 0 && <>검색 결과가 없습니다.</>}
-      {isLoading && <>데이터를 불러오고 있습니다..</>}
+      {filteredLength === 0 && <>검색 결과가 없습니다.</>}
+      {isLoading && <Spinner loading={isLoading} />}
     </div>
   );
 };
